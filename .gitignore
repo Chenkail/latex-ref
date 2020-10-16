@@ -1,0 +1,9 @@
+# Auto-generated files on PDF creation
+*.aux
+*.log
+*.synctex.gz
+*.toc
+
+# Blank files
+/tex/misc/extras/
+!/tex/misc/extras/extras.tex

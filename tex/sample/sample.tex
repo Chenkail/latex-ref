@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+
+% -------- Packages --------
+% Color package - needs to go first because LaTeX is stupid
+\usepackage[dvipsnames]{xcolor}
+% Move stuff to not start in the middle of the page
+\usepackage[margin=1in]{geometry}
+% Aligning equations and various other stuff
+\usepackage{amsmath, amsthm, amssymb, amscd}
+% Lists and list spacing
+\usepackage{enumerate}
+\usepackage{enumitem}
+% Reset align env counters
+\usepackage{etoolbox}
+% Bold math
+\usepackage{bm}
+% Spacing
+\usepackage{setspace}
+% Extends amsmath
+\usepackage{mathtools}
+% Create documents with multiple columns
+\usepackage{multicol} 
+% Wrap text around figures
+\usepackage{wrapfig}
+
+
+% -------- Optional formatting --------
+% Remove auto indent globally
+\setlength{\parindent}{0pt}
+
+% Reset align env counters - requires etoolbox package
+\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+
+% -------- New commands --------
+% Formatting
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\opair}[2]{\left(#1, #2\right)}
+
+% Colors
+\newcommand{\black}{\color{black}}
+\newcommand{\blk}{\black}
+\newcommand{\white}{\color{white}}
+\newcommand{\purple}{\color{Plum}}
+
+% Theorems
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+% Blackboard math
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+% Use bold math for vectors instead of the little arrow
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+% Misc useful
+\newcommand{\xy}{\left(x, y\right)}
+
+% Set break space
+\newcommand{\gap}{\vspace{5mm}}
+
+% -------- End of general stuff --------
+
+
+\begin{document}
+\title{Sample TeX File}
+\author{Your name here}
+\date{}
+
+\maketitle
+
+\tableofcontents{}
+\newpage
+
+% -------- Begin main content --------
+\section{This is a section}
+Here is a list:
+\begin{itemize}[noitemsep, topsep=0pt, label=-]
+\item Item 1
+\item Item 2
+\end{itemize}
+
+\gap
+
+\subsection{Here is a subsection}
+\begin{enumerate}
+\item Numbered item 1
+\item Numbered item 2
+\end{enumerate}
+
+\gap
+
+\subsubsection{Here is a subsubsection}
+You can align equations as follows:
+\begin{align}
+x&=y\\
+x^2&=y^2
+\end{align}
+
+You can also remove the equation numbers by adding an asterisk:
+\begin{align*}
+x&=y\\
+x^2&=y^2
+\end{align*}
+
+\end{document}
