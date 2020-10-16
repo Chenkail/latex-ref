@@ -5,7 +5,7 @@
 *.toc
 
 # Ignore blank files
-/tex/misc/extras/
+/tex/misc/
 
 # Include all .tex files
 !*.tex
