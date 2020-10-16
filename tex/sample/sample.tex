@@ -32,6 +32,16 @@
 \AtBeginEnvironment{align}{\setcounter{equation}{0}}
 
 
+% -------- Theorems --------
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+
+% -------- Replaced commands --------
+% Use bold math for vectors instead of the little arrow
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+
 % -------- New commands --------
 % Formatting
 \newcommand{\bb}[1]{\mathbb{#1}}
@@ -49,24 +59,18 @@
 \newcommand{\white}{\color{white}}
 \newcommand{\purple}{\color{Plum}}
 
-% Theorems
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}{Lemma}
-
 % Blackboard math
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
 
-% Use bold math for vectors instead of the little arrow
-\renewcommand{\vec}[1]{\mathbf{#1}}
-
 % Misc useful
 \newcommand{\xy}{\left(x, y\right)}
 
 % Set break space
 \newcommand{\gap}{\vspace{5mm}}
+
 
 % -------- End of general stuff --------
 
