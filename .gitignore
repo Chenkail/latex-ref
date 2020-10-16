@@ -4,6 +4,8 @@
 *.synctex.gz
 *.toc
 
-# Ignore blank files but keep tex
+# Ignore blank files
 /tex/misc/extras/
+
+# Include all .tex files
 !*.tex
