@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{mathtools}% includes amsmath
+
+\makeatletter
+
+\newlength\minalignvsep
+
+
+\def\align@preamble{%
+   &\hfil
+    \setboxz@h{\@lign$\m@th\displaystyle{##}$}%
+    \ifnum\row@>\@ne
+    \ifdim\ht\z@>\ht\strutbox@
+    \dimen@\ht\z@
+    \advance\dimen@\minalignvsep
+    \ht\strutbox\dimen@
+    \fi\fi
+    \strut@
+    \ifmeasuring@\savefieldlength@\fi
+    \set@field
+    \tabskip\z@skip
+   &\setboxz@h{\@lign$\m@th\displaystyle{{}##}$}%
+    \ifnum\row@>\@ne
+    \ifdim\ht\z@>\ht\strutbox@
+    \dimen@\ht\z@
+    \advance\dimen@\minalignvsep
+    \ht\strutbox@\dimen@
+    \fi\fi
+    \strut@
+    \ifmeasuring@\savefieldlength@\fi
+    \set@field
+    \hfil
+    \tabskip\alignsep@
+}
+\makeatother
+
+\minalignvsep.15em
+
+\begin{document}
+
+Taken from https://tex.stackexchange.com/questions/54587/
+
+\begin{minipage}[t]{0.20\linewidth}
+\textbf{Nice}
+\begin{align*}
+ x &= 73 \times 2\\
+   &= 146
+\end{align*}
+\end{minipage}%
+
+
+%
+\begin{minipage}[t]{0.25\linewidth}
+\textbf{Not so nice}
+\begin{align*}
+ x &= \frac{146}{10}\\
+   &= \frac{73}{5}
+\end{align*}
+\end{minipage}%
+
+
+\bigskip\par\noindent
+\textbf{Manual Tweak Options:}
+\medskip\par\noindent
+\begin{minipage}[t]{0.25\linewidth}
+\textbf{Tweak jot}
+\setlength{\jot}{8pt}% tweak
+\begin{align*}
+ x &= \frac{146}{10}\\
+   &= \frac{73}{5}
+\end{align*}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.30\linewidth}
+\textbf{Add vertical space}
+\begin{align*}
+ x &= \frac{146}{10}\\[5pt]% tweak
+   &= \frac{73}{5}
+\end{align*}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.30\linewidth}
+\textbf{spreadlines}
+\begin{spreadlines}{0.8em}% tweak
+\begin{align*}
+ x &= \frac{146}{10}\\
+   &= \frac{73}{5}
+\end{align*}
+\end{spreadlines}
+\end{minipage}%
+\end{document}
