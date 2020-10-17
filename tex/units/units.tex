@@ -1,9 +1,88 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 
-% Original taken from https://tex.stackexchange.com/a/8337
-
+% -------- Packages --------
+% Color package - needs to go first because LaTeX is stupid
+\usepackage[dvipsnames]{xcolor}
+% Page arranging
+\usepackage{geometry}
+% Aligning equations and various other stuff
+\usepackage{amsmath, amsthm, amssymb, amscd}
+% Lists and list spacing
+\usepackage{enumerate}
+\usepackage{enumitem}
+% Reset align env counters
+\usepackage{etoolbox}
+% Bold math
+\usepackage{bm}
+% Spacing
+\usepackage{setspace}
+% Extends amsmath
+\usepackage{mathtools}
+% Create documents with multiple columns
+\usepackage{multicol} 
+% Wrap text around figures
+\usepackage{wrapfig}
+% Extend array and tabular envs
 \usepackage{array}
-\usepackage[hmargin=2cm]{geometry}
+% Allow adjusting geometry and such on specific pages
+\usepackage{changepage}
+
+
+% -------- Optional formatting --------
+% Set margins
+\geometry{margin=1in}
+
+% Remove auto indent globally
+\setlength{\parindent}{0pt}
+
+% Reset align env counters - requires etoolbox package
+\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
+
+% -------- Theorems --------
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+
+% -------- Replaced commands --------
+% Use bold math for vectors instead of the little arrow
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+
+% -------- New commands --------
+% Formatting
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\inv}[1]{\left(#1\right)^{-1}}
+\newcommand{\braces}[1]{\left\lbrace #1 \right\rbrace}
+\newcommand{\bracks}[1]{\left[ #1 \right]}
+\newcommand{\abracks}[1]{\left\langle #1 \right\rangle}
+\newcommand{\parens}[1]{\left(#1\right)}
+
+% Colors
+\newcommand{\black}{\color{black}}
+\newcommand{\blk}{\black}
+\newcommand{\white}{\color{white}}
+\newcommand{\purple}{\color{Plum}}
+
+% Blackboard math
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+% Misc useful
+\newcommand{\xy}{\left(x, y\right)}
+
+% Set break space
+\newcommand{\gap}{\vspace{5mm}}
+
+
+% -------- End of general stuff --------
+
+
+
 
 \makeatletter
 %http://groups.google.com/group/comp.text.tex/msg/7e812e5d6e67fcc5
@@ -11,6 +90,17 @@
 \makeatother
 
 \begin{document}
+
+\section{Misc Notes}
+
+1in = 72.27pt = 72bp
+
+\pagebreak
+
+\section{Conversion Table}
+The following table gives decimal approximations of the scaling factors between various units used by LaTeX.
+
+\gap
 
 \begin{center}\begin{tabular}
   {>{\def\colunit{pt}}l<{\convertto{\rowunit}{1\colunit}}
@@ -34,5 +124,11 @@
 \gdef\rowunit{pc} & & & & & & & & & \rowunit\\
 \gdef\rowunit{in} & & & & & & & & & \rowunit\\
 \end{tabular}\end{center}
+
+\vspace{0.2in}
+Table taken from: https://tex.stackexchange.com/questions/8260/
+
+
+
 
 \end{document}

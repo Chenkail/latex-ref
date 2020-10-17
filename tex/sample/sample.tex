@@ -3,8 +3,8 @@
 % -------- Packages --------
 % Color package - needs to go first because LaTeX is stupid
 \usepackage[dvipsnames]{xcolor}
-% Move stuff to not start in the middle of the page
-\usepackage[margin=1in]{geometry}
+% Page arranging
+\usepackage{geometry}
 % Aligning equations and various other stuff
 \usepackage{amsmath, amsthm, amssymb, amscd}
 % Lists and list spacing
@@ -22,9 +22,16 @@
 \usepackage{multicol} 
 % Wrap text around figures
 \usepackage{wrapfig}
+% Extend array and tabular envs
+\usepackage{array}
+% Allow adjusting things on specific pages
+\usepackage{changepage}
 
 
 % -------- Optional formatting --------
+% Set margins
+\geometry{margin=1in}
+
 % Remove auto indent globally
 \setlength{\parindent}{0pt}
 
