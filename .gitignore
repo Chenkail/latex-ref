@@ -1,5 +1,6 @@
-# Auto-generated files on PDF creation
+# Texmaker auto-generated files
 *.aux
+*.dvi
 *.log
 *.out
 *.synctex.gz
