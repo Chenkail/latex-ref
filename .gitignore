@@ -1,6 +1,7 @@
 # Auto-generated files on PDF creation
 *.aux
 *.log
+*.out
 *.synctex.gz
 *.toc
 

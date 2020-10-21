@@ -26,6 +26,8 @@
 \usepackage{array}
 % Allow adjusting geometry and such on specific pages
 \usepackage{changepage}
+% Hyperlinks
+\usepackage{hyperref}
 
 
 % -------- Optional formatting --------
@@ -38,6 +40,13 @@
 % Reset align env counters - requires etoolbox package
 \AtBeginEnvironment{align}{\setcounter{equation}{0}}
 
+% Hyperlink formatting - requires hyperref package
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
 
 % -------- Theorems --------
 \newtheorem{theorem}{Theorem}
@@ -92,6 +101,7 @@
 \begin{document}
 
 \section{Misc Notes}
+See \url{https://www.overleaf.com/learn/latex/Lengths_in_LaTeX} for more
 
 1in = 72.27pt = 72bp
 
