@@ -5,7 +5,7 @@
 \usepackage[dvipsnames]{xcolor}
 % Page arranging
 \usepackage{geometry}
-% Aligning equations and various other stuff
+% American Mathematical Society packages
 \usepackage{amsmath, amsthm, amssymb, amscd}
 % Lists and list spacing
 \usepackage{enumerate}
@@ -24,7 +24,7 @@
 \usepackage{wrapfig}
 % Extend array and tabular envs
 \usepackage{array}
-% Allow adjusting geometry and such on specific pages
+% Allow adjusting things on specific pages
 \usepackage{changepage}
 % Hyperlinks
 \usepackage{hyperref}
@@ -34,11 +34,15 @@
 % Set margins
 \geometry{margin=1in}
 
+% Increase spacing in multiline envs
+% \setlength{\jot}{2\jot}
+
 % Remove auto indent globally
 \setlength{\parindent}{0pt}
 
 % Reset align env counters - requires etoolbox package
 \AtBeginEnvironment{align}{\setcounter{equation}{0}}
+
 
 % Hyperlink formatting - requires hyperref package
 \hypersetup{
@@ -47,6 +51,7 @@
     filecolor=magenta,      
     urlcolor=cyan,
 }
+
 
 % -------- Theorems --------
 \newtheorem{theorem}{Theorem}
@@ -88,7 +93,47 @@
 \newcommand{\gap}{\vspace{5mm}}
 
 
-% -------- End of preamble --------
+% -------- Larger stuff --------
+% -------- Align spacing fix --------
+% Increases spacing between lines in align envs when there are fractions
+% or other things increasing the size of lines
+\newlength\minalignvsep
+\minalignvsep.15em % Minimum space between lines in the align env
+
+\makeatletter
+\def\align@preamble{%
+   &\hfil
+    \setboxz@h{\@lign$\m@th\displaystyle{##}$}%
+    \ifnum\row@>\@ne
+    \ifdim\ht\z@>\ht\strutbox@
+    \dimen@\ht\z@
+    \advance\dimen@\minalignvsep
+    \ht\strutbox\dimen@
+    \fi\fi
+    \strut@
+    \ifmeasuring@\savefieldlength@\fi
+    \set@field
+    \tabskip\z@skip
+   &\setboxz@h{\@lign$\m@th\displaystyle{{}##}$}%
+    \ifnum\row@>\@ne
+    \ifdim\ht\z@>\ht\strutbox@
+    \dimen@\ht\z@
+    \advance\dimen@\minalignvsep
+    \ht\strutbox@\dimen@
+    \fi\fi
+    \strut@
+    \ifmeasuring@\savefieldlength@\fi
+    \set@field
+    \hfil
+    \tabskip\alignsep@
+}
+\makeatother
+
+% -------- End of align spacing fix --------
+
+% -------- End of large fixes section --------
+
+% -------- End preamble --------
 
 
 \begin{document}
