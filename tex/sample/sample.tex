@@ -88,9 +88,11 @@
 \newcommand{\N}{\mathbb{N}}
 
 % Misc useful
-% Better limits
-\newcommand{\limit}[2]{\lim\limits_{#1 \to #2}}
-\newcommand{\xy}{\left(x, y\right)}
+\newcommand{\limit}[2]{\lim\limits_{#1 \to #2}} % Better limits
+\newcommand{\xy}{\left(x, y\right)} % (x, y)
+\newcommand{\an}{\braces{a_n}} % Sequence notation {a_n}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\dhalf}{\dfrac{1}{2}}
 
 % Set break space
 \newcommand{\gap}{\vspace{5mm}}
@@ -161,7 +163,7 @@ Here is a list:
 
 \subsection{Here is a subsection}
 \begin{spreadlines}{2\baselineskip}
-\begin{enumerate}
+\begin{enumerate}[label=(\alph*)]
 \item Numbered item 1
 \item Numbered item 2
 \end{enumerate}
