@@ -89,13 +89,17 @@
 
 % Misc useful
 \newcommand{\limit}[2]{\lim\limits_{#1 \to #2}} % Better limits
+\newcommand{\sumto}[3]{\sum\limits_{#1 = #2}^#3} % Better sum
 \newcommand{\xy}{\left(x, y\right)} % (x, y)
+\newcommand{\ank}{a_{n_k}} % a_n_k
 \newcommand{\an}{\braces{a_n}} % Sequence notation {a_n}
 \newcommand{\bn}{\braces{b_n}} % Sequence notation {b_n}
+\newcommand{\cn}{\braces{c_n}} % Sequence notation {c_n}
 \newcommand{\half}{\frac{1}{2}}
 \newcommand{\dhalf}{\dfrac{1}{2}}
 
 % Set break space
+\newcommand{\mm}{\vspace{1mm}}
 \newcommand{\gap}{\vspace{5mm}}
 
 
@@ -163,12 +167,14 @@ Here is a list:
 \gap
 
 \subsection{Here is a subsection}
+\begin{proof} \quad % Blank line
 \begin{spreadlines}{2\baselineskip}
 \begin{enumerate}[label=(\alph*)]
 \item Numbered item 1
 \item Numbered item 2
 \end{enumerate}
 \end{spreadlines}
+\end{proof}
 
 Use \textbackslash{}mathrm to make normal text in a math block, such as the d in the integral below:
 
@@ -195,5 +201,7 @@ x^2&=\parens{\frac{1}{2}}^2
 \begin{lemma}
 This is a lemma
 \end{lemma}
+
+$\sumto{n}{1}{\infty}$
 
 \end{document}
