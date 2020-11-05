@@ -1,0 +1,7 @@
+var txt = TM.selection;
+if (txt != "") {
+  var pos = TM.selectionStart;
+  txt = "$" + txt + "$";
+  TM.insertText(txt);
+  TM.selectRange(pos, txt.length);
+}

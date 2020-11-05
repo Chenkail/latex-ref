@@ -1,0 +1,4 @@
+var txt = TM.selection;
+if (txt != "") {
+  TM.insertText(\$txt$);
+}
