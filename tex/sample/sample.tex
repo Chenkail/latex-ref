@@ -28,11 +28,18 @@
 \usepackage{changepage}
 % Hyperlinks
 \usepackage{hyperref}
+% Tables
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{multirow}
 
 
 % -------- Optional formatting --------
 % Set margins
 \geometry{margin=1in}
+
+% Increase height of table rows
+\def\arraystretch{2.2}
 
 % Increase spacing in multiline envs
 % \setlength{\jot}{2\jot}
@@ -101,11 +108,17 @@
 \newcommand{\fdr}{f: D\to \R} % A function f from D to the reals
 \newcommand{\half}{\frac{1}{2}}
 \newcommand{\dhalf}{\dfrac{1}{2}}
+\newcommand{\eqv}{\equiv}
+\newcommand{\then}{\rightarrow}
 
 % Set break space
 \newcommand{\mm}{\vspace{1mm}}
 \newcommand{\gap}{\vspace{3mm}}
 
+% Linear algebra
+\newcommand{\Rm}{$\R^m$ }
+\newcommand{\Rn}{$\R^n$ }
+\newcommand{\trmrn}{T:\R^m\rightarrow\R^n} % Transformation from Rm to Rn
 
 % -------- Larger stuff --------
 % -------- Align spacing fix --------
