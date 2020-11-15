@@ -29,8 +29,7 @@
 % Hyperlinks
 \usepackage{hyperref}
 % Tables
-\usepackage{array}
-\usepackage{supertabular}
+\usepackage{tabulary,booktabs}
 \usepackage{multirow}
 
 
@@ -39,7 +38,7 @@
 \geometry{margin=1in}
 
 % Increase height of table rows
-\def\arraystretch{2.2}
+\def\arraystretch{1.2}
 
 % Increase spacing in multiline envs
 % \setlength{\jot}{2\jot}
@@ -220,5 +219,42 @@ This is a lemma
 \end{lemma}
 
 $\sumto{n}{1}{\infty}$
+
+\begin{table}
+\centering
+\caption{The caption}
+\begin{tabulary}{\linewidth}{LLCL}
+\toprule
+{\bfseries Name} &
+{\bfseries Meaning} &
+{\bfseries Symbol} &
+{\bfseries LaTeX}\\\midrule
+Empty set & The set containing zero elements & ${\emptyset}$ OR \{\} & {\textbackslash}emptyset\\\midrule
+
+In & a is an element of b & a ${\in}$ b & {\textbackslash}in\\\midrule
+
+Not in & a is not an element of b & a ${\notin}$ b & ~ \\\midrule
+
+Subset & All elements of a are in b & a ${\subseteq}$ b & {\textbackslash}subseteq\\\midrule
+
+Proper subset & A is a subset of b but not equal to b & a ${\subset}$ b & {\textbackslash}subset\\\midrule
+
+Universal set & Set of all possible elements & U & ~ \\\midrule
+
+Union & Elements in either A or B or both & A ${\cup}$ B & ~ \\\midrule
+
+Intersection & Elements in both A and B & A ${\cap}$ B & ~ \\\midrule
+
+Set difference & Elements in A that are not in B & A - B & ~ \\\midrule
+
+Complement (sets) & Set difference U - A
+ & \=A or A\textsuperscript{c} & ~ \\\midrule
+
+Power set & Set of all possible subsets of A & P(A) & ~ \\\midrule
+
+Cardinality & Number of distinct elements in A & {\textbar}A{\textbar} or card(A) & ~ \\
+\bottomrule
+\end{tabulary}
+\end{table}
 
 \end{document}

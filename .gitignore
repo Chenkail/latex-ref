@@ -4,6 +4,7 @@
 *.log
 *.out
 *.synctex.gz
+*.synctex(busy)
 *.toc
 
 # Ignore blank files
