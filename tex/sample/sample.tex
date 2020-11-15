@@ -38,7 +38,7 @@
 \geometry{margin=1in}
 
 % Increase height of table rows
-\def\arraystretch{1.2}
+\def\arraystretch{1.4}
 
 % Increase spacing in multiline envs
 % \setlength{\jot}{2\jot}
@@ -220,41 +220,41 @@ This is a lemma
 
 $\sumto{n}{1}{\infty}$
 
-\begin{table}
-\centering
-\caption{The caption}
+\section{Sample table}
+
+\begin{center}
 \begin{tabulary}{\linewidth}{LLCL}
-\toprule
+\hline
 {\bfseries Name} &
 {\bfseries Meaning} &
 {\bfseries Symbol} &
-{\bfseries LaTeX}\\\midrule
-Empty set & The set containing zero elements & ${\emptyset}$ OR \{\} & {\textbackslash}emptyset\\\midrule
+{\bfseries LaTeX}\\\hline
+Empty set & The set containing zero elements & ${\emptyset}$ OR \{\} & {\textbackslash}emptyset\\\hline
 
-In & a is an element of b & a ${\in}$ b & {\textbackslash}in\\\midrule
+In & a is an element of b & a ${\in}$ b & {\textbackslash}in\\\hline
 
-Not in & a is not an element of b & a ${\notin}$ b & ~ \\\midrule
+Not in & a is not an element of b & a ${\notin}$ b & ~ \\\hline
 
-Subset & All elements of a are in b & a ${\subseteq}$ b & {\textbackslash}subseteq\\\midrule
+Subset & All elements of a are in b & a ${\subseteq}$ b & {\textbackslash}subseteq\\\hline
 
-Proper subset & A is a subset of b but not equal to b & a ${\subset}$ b & {\textbackslash}subset\\\midrule
+Proper subset & A is a subset of b but not equal to b & a ${\subset}$ b & {\textbackslash}subset\\\hline
 
-Universal set & Set of all possible elements & U & ~ \\\midrule
+Universal set & Set of all possible elements & U & ~ \\\hline
 
-Union & Elements in either A or B or both & A ${\cup}$ B & ~ \\\midrule
+Union & Elements in either A or B or both & A ${\cup}$ B & ~ \\\hline
 
-Intersection & Elements in both A and B & A ${\cap}$ B & ~ \\\midrule
+Intersection & Elements in both A and B & A ${\cap}$ B & ~ \\\hline
 
-Set difference & Elements in A that are not in B & A - B & ~ \\\midrule
+Set difference & Elements in A that are not in B & A - B & ~ \\\hline
 
 Complement (sets) & Set difference U - A
- & \=A or A\textsuperscript{c} & ~ \\\midrule
+ & \=A or A\textsuperscript{c} & ~ \\\hline
 
-Power set & Set of all possible subsets of A & P(A) & ~ \\\midrule
+Power set & Set of all possible subsets of A & P(A) & ~ \\\hline
 
 Cardinality & Number of distinct elements in A & {\textbar}A{\textbar} or card(A) & ~ \\
-\bottomrule
+\hline
 \end{tabulary}
-\end{table}
+\end{center}
 
 \end{document}
