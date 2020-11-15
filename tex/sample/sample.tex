@@ -19,7 +19,7 @@
 % Extends amsmath
 \usepackage{mathtools}
 % Create documents with multiple columns
-\usepackage{multicol} 
+\usepackage{multicol}
 % Wrap text around figures
 \usepackage{wrapfig}
 % Extend array and tabular envs
@@ -29,7 +29,9 @@
 % Hyperlinks
 \usepackage{hyperref}
 % Tables
-\usepackage{tabulary,booktabs}
+\usepackage{array} % Required for several table packages
+\usepackage{supertabular} % Allows tables to extend across pages
+\usepackage{tabulary,booktabs} % Different kind of table
 \usepackage{multirow}
 
 
@@ -109,6 +111,7 @@
 \newcommand{\dhalf}{\dfrac{1}{2}}
 \newcommand{\eqv}{\equiv}
 \newcommand{\then}{\rightarrow}
+\newcommand{\scomp}{^\mathsf{c}} % Set complement
 
 % Set break space
 \newcommand{\mm}{\vspace{1mm}}
