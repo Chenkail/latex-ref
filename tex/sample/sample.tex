@@ -72,17 +72,6 @@
 
 
 % -------- New commands --------
-% Formatting
-\newcommand{\bb}[1]{\mathbb{#1}}
-\newcommand{\floor}[1]{\lfloor #1 \rfloor}
-\newcommand{\ceil}[1]{\lceil #1 \rceil}
-\newcommand{\inv}[1]{\left(#1\right)^{-1}}
-\newcommand{\braces}[1]{\left\lbrace #1 \right\rbrace}
-\newcommand{\bracks}[1]{\left[ #1 \right]}
-\newcommand{\abracks}[1]{\left\langle #1 \right\rangle}
-\newcommand{\parens}[1]{\left(#1\right)}
-\newcommand{\abs}[1]{\lvert #1\rvert}
-
 % Colors
 \newcommand{\black}{\color{black}}
 \newcommand{\blk}{\black}
@@ -95,36 +84,62 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\N}{\mathbb{N}}
 
-% Misc useful
+% Greek
+\newcommand{\ed}{\epsilon-\delta}
+
+% Formatting
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\inv}[1]{\left(#1\right)^{-1}}
+\newcommand{\braces}[1]{\left\lbrace #1 \right\rbrace}
+\newcommand{\bracks}[1]{\left[ #1 \right]}
+\newcommand{\abracks}[1]{\left\langle #1 \right\rangle}
+\newcommand{\parens}[1]{\left(#1\right)}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+
+% Specific functions
+\newcommand{\scomp}{^\mathsf{c}} % Set complement
 \newcommand{\limto}[2]{\lim\limits_{#1 \to #2}} % Better limits
 \newcommand{\sumto}[3]{\sum\limits_{#1 = #2}^#3} % Better sum
 \newcommand{\liminfto}[2]{\liminf\limits_{#1 \to #2}} % Better lim inf
 \newcommand{\limsupto}[2]{\limsup\limits_{#1 \to #2}} % Better lim sup
-\newcommand{\xy}{\left(x, y\right)} % (x, y)
+
+% Linear algebra
+\newcommand{\Rm}{$\R^m$ } % Intended only for use in text mode - keep the space!
+\newcommand{\Rn}{$\R^n$ } % Intended only for use in text mode - keep the space!
+\newcommand{\trmrn}{T:\R^m\rightarrow\R^n} % Transformation from Rm to Rn
+
+% Sequences
 \newcommand{\ank}{a_{n_k}} % a_n_k
 \newcommand{\an}{\braces{a_n}} % Sequence notation {a_n}
 \newcommand{\bn}{\braces{b_n}} % Sequence notation {b_n}
 \newcommand{\cn}{\braces{c_n}} % Sequence notation {c_n}
 \newcommand{\sn}{\braces{s_n}} % Sequence notation {s_n}
+
+% Functions and intervals
+\newcommand{\xy}{\left(x, y\right)} % (x, y)
 \newcommand{\abc}{\bracks{a,\,b}} % [a,b]
 \newcommand{\abo}{\braces{a,\,b}} % (a,b)
+\newcommand{\dtr}{D\to\R}
+\newcommand{\rtr}{\R\to\R}
 \newcommand{\fabr}{f: \bracks{a,\,b}\to\R} % A function f from [a,b] to the reals
 \newcommand{\frr}{f: \R\to\R} % A function f from the reals to the reals
+\newcommand{\grr}{g: \R\to\R} % A function g from the reals to the reals
 \newcommand{\fdr}{f: D\to\R} % A function f from D to the reals
+\newcommand{\gdr}{g: D\to\R} % A function g from D to the reals
+\newcommand{\gfdr}{g\circ f: D\to\R} % g of f from D to the reals
+
+% Misc. shortcuts
 \newcommand{\half}{\frac{1}{2}}
 \newcommand{\dhalf}{\dfrac{1}{2}}
 \newcommand{\eqv}{\equiv}
 \newcommand{\then}{\rightarrow}
-\newcommand{\scomp}{^\mathsf{c}} % Set complement
 
-% Set break space
+% Spacing
 \newcommand{\mm}{\vspace{1mm}}
 \newcommand{\gap}{\vspace{3mm}}
 
-% Linear algebra
-\newcommand{\Rm}{$\R^m$ }
-\newcommand{\Rn}{$\R^n$ }
-\newcommand{\trmrn}{T:\R^m\rightarrow\R^n} % Transformation from Rm to Rn
 
 % -------- Larger stuff --------
 % -------- Align spacing fix --------
