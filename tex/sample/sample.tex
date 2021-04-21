@@ -106,6 +106,7 @@
 \newcommand{\scomp}{^\mathsf{c}} % Set complement
 \newcommand{\limto}[2]{\lim\limits_{#1 \to #2}} % Better limits
 \newcommand{\sumto}[3]{\sum\limits_{#1 = #2}^#3} % Better sum
+\newcommand{\limxtox}{\limto{x}{x_0}} % Limit as x goes to x_0
 \newcommand{\limtoinf}{\limto{n}{\infty}} % Limit as n goes to infinity
 \newcommand{\sumtoinf}{\sumto{n}{1}{\infty}} % Sum from one to infinity
 \newcommand{\liminfto}[2]{\liminf\limits_{#1 \to #2}} % Better lim inf
@@ -119,7 +120,10 @@
 \newcommand{\trmrn}{T\colon\R^m\rightarrow\R^n} % Transformation from Rm to Rn
 
 % Sequences
+\newcommand{\anj}{a_{n_j}} % a_n_j
 \newcommand{\ank}{a_{n_k}} % a_n_k
+\newcommand{\xnj}{x_{n_j}} % x_n_j
+\newcommand{\xnk}{x_{n_k}} % x_n_k
 \newcommand{\an}{\braces{a_n}} % Sequence notation {a_n}
 \newcommand{\bn}{\braces{b_n}} % Sequence notation {b_n}
 \newcommand{\cn}{\braces{c_n}} % Sequence notation {c_n}
@@ -133,6 +137,7 @@
 \newcommand{\zinf}{[0,\infty)} % [0, infinity)
 \newcommand{\zinfe}{(0,\infty)} % (0, infinity)
 \newcommand{\infz}{(-\infty, 0]} % (-infinity, 0)
+\newcommand{\infze}{(-\infty, 0)} % (-infinity, 0)
 \newcommand{\fx}{f(x)} % f(x)
 \newcommand{\fy}{f(y)} % f(y)
 \newcommand{\gx}{g(x)} % g(x)
@@ -153,6 +158,9 @@
 \newcommand{\fir}{f\colon I\to\R} % A function f from the interval I to the reals
 \newcommand{\fsr}{f\colon S\to\R} % A function f from the set S to the reals
 \newcommand{\gfdr}{g\circ f\colon D\to\R} % g of f from D to the reals
+
+\newcommand{\derivx}{\frac{f(x)-f(x_0)}{x-x_0}} % Derivative definition: (f(x) - f(x_0))/(x-x_0)
+
 
 % Misc. shortcuts
 \newcommand{\half}{\frac{1}{2}}
