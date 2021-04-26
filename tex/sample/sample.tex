@@ -114,6 +114,19 @@
 \newcommand{\liminftoinf}{\liminf\limits_{n \to \infty}} % Lim inf n to infinity
 \newcommand{\limsuptoinf}{\limsup\limits_{n \to \infty}} % Lim sup n to infinity
 
+% Upper/lower integrals
+\def\upint{\mathchoice%
+    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  \int}
+\def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
+
+\newcommand{\intab}{\int_a^b}
+\newcommand{\upintab}{\upint_a^b}
+\newcommand{\lowintab}{\lowint_a^b}
+
 % More limits
 \newcommand{\xtoxo}{x\to x_0} % x -> x_0
 
@@ -162,6 +175,8 @@
 \newcommand{\fir}{f\colon I\to\R} % A function f from the interval I to the reals
 \newcommand{\fsr}{f\colon S\to\R} % A function f from the set S to the reals
 \newcommand{\gfdr}{g\circ f\colon D\to\R} % g of f from D to the reals
+
+\newcommand{\partition}{\braces{x_0, x_1, \hdots, x_n}} % Definition of a partition
 
 \newcommand{\derivx}{\frac{f(x)-f(x_0)}{x-x_0}} % Derivative definition: (f(x) - f(x_0))/(x-x_0)
 
