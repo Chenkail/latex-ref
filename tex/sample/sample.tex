@@ -106,8 +106,9 @@
 \newcommand{\scomp}{^\mathsf{c}} % Set complement
 \newcommand{\limto}[2]{\lim\limits_{#1 \to #2}} % Better limits
 \newcommand{\sumto}[3]{\sum\limits_{#1 = #2}^{#3}} % Better sum
-\newcommand{\limxtox}{\limto{x}{x_0}} % Limit as x goes to x_0
-\newcommand{\limtoinf}{\limto{n}{\infty}} % Limit as n goes to infinity
+\newcommand{\limxtoxo}{\limto{x}{x_0}} % Limit as x goes to x_0
+\newcommand{\limtoinf}[1]{\limto{#1}{\infty}} % Limit as n goes to infinity
+\newcommand{\limntoinf}{\limtoinf{n}} % Limit as n goes to infinity
 \newcommand{\sumtoinf}{\sumto{n}{1}{\infty}} % Sum from one to infinity
 \newcommand{\liminfto}[2]{\liminf\limits_{#1 \to #2}} % Better lim inf
 \newcommand{\limsupto}[2]{\limsup\limits_{#1 \to #2}} % Better lim sup
@@ -146,6 +147,7 @@
 \newcommand{\cn}{\braces{c_n}} % Sequence notation {c_n}
 \newcommand{\sn}{\braces{s_n}} % Sequence notation {s_n}
 \newcommand{\xn}{\braces{x_n}} % Sequence notation {x_n}
+\newcommand{\Pn}{\braces{P_n}} % A sequence {P_n} of partitions
 
 % Functions and intervals
 \newcommand{\xy}{\left(x, y\right)} % (x, y)
@@ -190,6 +192,11 @@
 
 \newcommand{\derivx}{\frac{f(x)-f(x_0)}{x-x_0}} % Derivative definition: (f(x) - f(x_0))/(x-x_0)
 
+% Integrals and Sums
+\newcommand{\lfp}{L(f, P)}
+\newcommand{\ufp}{U(f, P)}
+\newcommand{\lfpn}{L(f, P_n)}
+\newcommand{\ufpn}{U(f, P_n)}
 
 % Misc. shortcuts
 \newcommand{\half}{\frac{1}{2}}
