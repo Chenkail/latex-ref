@@ -101,6 +101,7 @@
 \newcommand{\abracks}[1]{\left\langle #1 \right\rangle}
 \newcommand{\parens}[1]{\left(#1\right)}
 \newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\dbars}[1]{\left\lVert #1\right\rVert}
 
 % Specific functions
 \newcommand{\scomp}{^\mathsf{c}} % Set complement
@@ -169,7 +170,6 @@
 \newcommand{\isubr}{I\subset\R}
 \newcommand{\xoi}{x_0 \in I}
 
-
 \newcommand{\fx}{f(x)} % f(x)
 \newcommand{\gx}{g(x)} % g(x)
 \newcommand{\fxo}{f(x_0)} % f(x_0)
@@ -185,8 +185,8 @@
 \newcommand{\inv}{^{-1}}
 \newcommand{\finvx}{f\inv (x)} % f(x)
 \newcommand{\invp}[1]{\left(#1\right)^{-1}}
-\newcommand{\fabr}{f\colon \bracks{a,\,b}\to\R} % A function f from [a,b] to the reals
-\newcommand{\fabro}{f\colon \parens{a,\,b}\to\R} % A function f from (a,b) to the reals
+\newcommand{\fabcr}{f\colon \bracks{a,\,b}\to\R} % A function f from [a,b] to the reals
+\newcommand{\fabor}{f\colon \parens{a,\,b}\to\R} % A function f from (a,b) to the reals
 \newcommand{\gabr}{g\colon \bracks{a,\,b}\to\R} % A function f from [a,b] to the reals
 \newcommand{\gabro}{g\colon \parens{a,\,b}\to\R} % A function f from (a,b) to the reals
 \newcommand{\fgabr}{f, g\colon \bracks{a,\,b}\to\R} % A function f from [a,b] to the reals
@@ -204,9 +204,12 @@
 \newcommand{\fsr}{f\colon S\to\R} % A function f from the set S to the reals
 \newcommand{\gfdr}{g\circ f\colon D\to\R} % g of f from D to the reals
 
+\newcommand{\gammaabc}{\gamma \colon \abc}
+
 \newcommand{\partition}{\braces{x_0, x_1, \hdots, x_n}} % Definition of a partition
 
-\newcommand{\derivx}{\frac{f(x)-f(x_0)}{x-x_0}} % Derivative definition: (f(x) - f(x_0))/(x-x_0)
+% Derivative definition: (f(x) - f(x_0))/(x-x_0)
+\newcommand{\derivx}{\frac{f(x)-f(x_0)}{x-x_0}}
 
 % Integrals and Sums
 \newcommand{\lfp}{L(f, P)}
@@ -217,8 +220,9 @@
 % Misc. shortcuts
 \newcommand{\half}{\frac{1}{2}}
 \newcommand{\dhalf}{\dfrac{1}{2}}
+\newcommand{\thalf}{\tfrac{1}{2}}
 \newcommand{\eqv}{\equiv}
-\newcommand{\then}{\rightarrow}
+\newcommand{\ddx}{\frac{d}{dx}}
 
 % Spacing
 \newcommand{\mm}{\vspace{1mm}}
