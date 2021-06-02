@@ -83,6 +83,9 @@
 \newcommand{\tiff}{if and only if}
 \newcommand{\oto}{one-to-one}
 
+% Variables
+\newcommand{\xstar}{x_{\star}}
+
 % Blackboard math
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
@@ -114,7 +117,8 @@
 \newcommand{\limntoinf}{\limtoinf{n}} % Limit as n goes to infinity
 \newcommand{\limntoninf}{\limtoninf{n}} % Limit as n goes to -infinity
 \newcommand{\limntopinf}{\limtopinf{n}} % Limit as n goes to +infinity
-\newcommand{\sumtoinf}{\sumto{n}{1}{\infty}} % Sum from one to infinity
+\newcommand{\sumtoinf}[1]{\sumto{#1}{1}{\infty}} % Sum from one to infinity
+\newcommand{\sumntoinf}{\sumtoinf{n}} % Sum of n from one to infinity
 \newcommand{\liminfto}[2]{\liminf\limits_{#1 \to #2}} % Better lim inf
 \newcommand{\limsupto}[2]{\limsup\limits_{#1 \to #2}} % Better lim sup
 \newcommand{\liminftoinf}{\liminf\limits_{n \to \infty}} % Lim inf n to infinity
@@ -158,6 +162,8 @@
 \newcommand{\xy}{\left(x, y\right)} % (x, y)
 \newcommand{\abc}{\bracks{a,\,b}} % [a, b]
 \newcommand{\abo}{\parens{a,\,b}} % (a, b)
+\newcommand{\zonec}{[0, 1]}
+\newcommand{\zoneo}{(0, 1)}
 \newcommand{\zinf}{[0,\infty)} % [0, infinity)
 \newcommand{\zinfo}{(0,\infty)} % (0, infinity)
 \newcommand{\infz}{(-\infty, 0]} % (-infinity, 0]
@@ -203,6 +209,8 @@
 \newcommand{\gji}{g\colon J\to I} % A function g from the interval I to an interval J
 \newcommand{\fsr}{f\colon S\to\R} % A function f from the set S to the reals
 \newcommand{\gfdr}{g\circ f\colon D\to\R} % g of f from D to the reals
+\newcommand{\fnir}{f_n\colon I\to\R}
+
 
 \newcommand{\gammaabc}{\gamma \colon \abc}
 
