@@ -238,6 +238,17 @@
 \newcommand{\mm}{\vspace{1mm}}
 \newcommand{\gap}{\vspace{3mm}}
 
+% Text boxes
+\usepackage[most]{tcolorbox}
+\newtcolorbox{textbox}[1][]{
+  sharp corners,
+  enhanced,
+  colback=white,
+  height=3cm,
+  attach title to upper,
+  #1
+}
+
 
 % -------- Larger stuff --------
 % -------- Align spacing fix --------
